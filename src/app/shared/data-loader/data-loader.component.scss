@@ -1,0 +1,32 @@
+$drop-zone-color: rgb(100, 100, 100);
+$drop-zone-hover-color: rgb(150, 150, 150);
+$drop-zone-file-over-color: rgb(160, 240, 255);
+
+.drop-area {
+    padding: 15px;
+    .drop-zone {
+        display: flex;
+        flex-direction: column;
+        border: 2px dashed $drop-zone-color;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        justify-content: center;
+        align-items: center;
+        p,
+        h5 {
+            color: $drop-zone-color;
+        }
+        &:hover {
+            border-color: $drop-zone-hover-color;
+            p,
+            h5 {
+                color: $drop-zone-hover-color;
+            }
+        }
+    }
+}
+
+.nv-file-over {
+    border-color: $drop-zone-file-over-color !important;
+}
+  

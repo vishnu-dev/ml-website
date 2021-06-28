@@ -1,0 +1,18 @@
+<button nbButton status="primary" *ngIf="type === 'button'">Load Data</button>
+<div *ngIf="type === 'drop'" class="container-fluid h-100 drop-area">
+    <div
+        ng2FileDrop
+        [uploader]="uploader"
+        class="drop-zone h-100"
+        [ngClass]="{'nv-file-over': hasBaseDropZoneOver}"
+        (fileOver)="fileOverBase($event)"
+        (onFileDrop)="fileDropped($event)"
+    >
+        <h5>{{
+            hasBaseDropZoneOver ?
+            "Drop it!":
+            "Upload or Drop your file here"
+        }}</h5>
+        <p>Accepts only xlsx or csv</p>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<nb-layout>
+
+  <nb-layout-header fixed>
+    <h3>Machine Learning</h3>
+  </nb-layout-header>
+
+  <nb-sidebar [state]="sidebarState">
+    <nb-menu [items]="items"></nb-menu>
+  </nb-sidebar>
+
+  <nb-layout-column class="colored-column-basic">
+    <router-outlet></router-outlet>
+  </nb-layout-column>
+</nb-layout>
